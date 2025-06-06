@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - C++ Time Complexity Analyzer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="fas fa-code me-2"></i>
+                C++ Complexity Analyzer
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="{{ url_for('index') }}">
+                    <i class="fas fa-home me-1"></i>Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mb-4">
+                    <i class="fas fa-question-circle text-primary me-2"></i>
+                    Help & Documentation
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Getting Started -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title mb-0">
+                            <i class="fas fa-rocket me-2"></i>Getting Started
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <h5>How to Use the Analyzer</h5>
+                        <ol>
+                            <li><strong>Upload Files:</strong> Click "Upload Files" tab and select your C++ files (.cpp, .h, etc.)</li>
+                            <li><strong>Code Snippet:</strong> Or paste your C++ code directly in the "Code Snippet" tab</li>
+                            <li><strong>Analyze:</strong> Click the "Analyze" button to start the analysis</li>
+                            <li><strong>Review Results:</strong> View detailed complexity analysis for each function</li>
+                            <li><strong>Export:</strong> Download results in JSON or text format</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Time Complexity Guide -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="card-title mb-0">
+                            <i class="fas fa-chart-line me-2"></i>Time Complexity Guide
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Complexity</th>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Examples</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="badge bg-success">O(1)</span></td>
+                                        <td>Constant</td>
+                                        <td>Same time regardless of input size</td>
+                                        <td>Array access, hash lookup</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge bg-info">O(log n)</span></td>
+                                        <td>Logarithmic</td>
+                                        <td>Time grows logarithmically</td>
+                                        <td>Binary search, tree operations</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge bg-primary">O(n)</span></td>
+                                        <td>Linear</td>
+                                        <td>Time grows linearly with input</td>
+                                        <td>Linear search, single loop</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge bg-warning">O(n log n)</span></td>
+                                        <td>Linearithmic</td>
+                                        <td>Efficient sorting complexity</td>
+                                        <td>Merge sort, heap sort</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge bg-orange">O(n²)</span></td>
+                                        <td>Quadratic</td>
+                                        <td>Time grows with square of input</td>
+                                        <td>Bubble sort, nested loops</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge bg-danger">O(2^n)</span></td>
+                                        <td>Exponential</td>
+                                        <td>Time doubles with each input</td>
+                                        <td>Recursive fibonacci, subsets</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Supported Features -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="card-title mb-0">
+                            <i class="fas fa-cog me-2"></i>Supported Features
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Loop Analysis</h5>
+                                <ul>
+                                    <li>For loops with various patterns</li>
+                                    <li>While loops</li>
+                                    <li>Nested loop detection</li>
+                                    <li>Iterator-based loops</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Algorithm Recognition</h5>
+                                <ul>
+                                    <li>STL algorithm usage</li>
+                                    <li>Sorting algorithms</li>
+                                    <li>Search algorithms</li>
+                                    <li>Data structure operations</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <h5>Recursion Analysis</h5>
+                                <ul>
+                                    <li>Direct recursion</li>
+                                    <li>Divide and conquer patterns</li>
+                                    <li>Exponential recursion detection</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5>Data Structure Operations</h5>
+                                <ul>
+                                    <li>Vector operations</li>
+                                    <li>Map/Set operations</li>
+                                    <li>Stack/Queue operations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code Examples -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-secondary text-white">
+                        <h3 class="card-title mb-0">
+                            <i class="fas fa-code me-2"></i>Code Examples
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <h5>Example 1: Linear Search - O(n)</h5>
+                        <pre><code>int linearSearch(vector&lt;int&gt;&amp; arr, int target) {
+    for (int i = 0; i &lt; arr.size(); i++) {
+        if (arr[i] == target) {
+            return i;
+        }
+    }
+    return -1;
+}</code></pre>
+
+                        <h5 class="mt-4">Example 2: Binary Search - O(log n)</h5>
+                        <pre><code>int binarySearch(vector&lt;int&gt;&amp; arr, int target) {
+    int left = 0, right = arr.size() - 1;
+    while (left &lt;= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == target) return mid;
+        else if (arr[mid] &lt; target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}</code></pre>
+
+                        <h5 class="mt-4">Example 3: Bubble Sort - O(n²)</h5>
+                        <pre><code>void bubbleSort(vector&lt;int&gt;&amp; arr) {
+    int n = arr.size();
+    for (int i = 0; i &lt; n - 1; i++) {
+        for (int j = 0; j &lt; n - i - 1; j++) {
+            if (arr[j] &gt; arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-dark text-white">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-file-code me-2"></i>Supported File Types
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>.cpp</li>
+                            <li><i class="fas fa-check text-success me-2"></i>.cc</li>
+                            <li><i class="fas fa-check text-success me-2"></i>.cxx</li>
+                            <li><i class="fas fa-check text-success me-2"></i>.c++</li>
+                            <li><i class="fas fa-check text-success me-2"></i>.hpp</li>
+                            <li><i class="fas fa-check text-success me-2"></i>.h</li>
+                            <li><i class="fas fa-check text-success me-2"></i>.hxx</li>
+                            <li><i class="fas fa-check text-success me-2"></i>.h++</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-exclamation-triangle me-2"></i>Important Notes
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="small">
+                            <li>Analysis is based on static code analysis</li>
+                            <li>Results are estimations and may vary with actual runtime</li>
+                            <li>Complex recursive patterns may not be fully detected</li>
+                            <li>Template code analysis is limited</li>
+                            <li>Maximum file size: 16MB</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-lightbulb me-2"></i>Tips
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="small">
+                            <li>Use meaningful function names for better analysis</li>
+                            <li>Include complete function implementations</li>
+                            <li>Remove unnecessary comments for cleaner analysis</li>
+                            <li>Test with simple functions first</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 C++ Time Complexity Analyzer | Built with Flask & Bootstrap</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+/* Custom styles for C++ Time Complexity Analyzer */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.code-editor {
+    font-family: 'Courier New', Monaco, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.code-editor:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    border-radius: 12px 12px 0 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.nav-tabs .nav-link {
+    border-radius: 8px 8px 0 0;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    border: none;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #198754, #157347);
+    border: none;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ffc107, #ffca2c);
+    border: none;
+    color: #000;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #dc3545, #bb2d3b);
+    border: none;
+}
+
+.badge {
+    font-size: 0.85em;
+    padding: 0.5em 0.75em;
+    border-radius: 6px;
+}
+
+.bg-orange {
+    background-color: #fd7e14 !important;
+}
+
+/* Complexity color coding */
+.complexity-constant { color: #198754; font-weight: bold; }
+.complexity-logarithmic { color: #17a2b8; font-weight: bold; }
+.complexity-linear { color: #0d6efd; font-weight: bold; }
+.complexity-linearithmic { color: #ffc107; font-weight: bold; }
+.complexity-quadratic { color: #fd7e14; font-weight: bold; }
+.complexity-cubic { color: #dc3545; font-weight: bold; }
+.complexity-exponential { color: #6f42c1; font-weight: bold; }
+.complexity-unknown { color: #6c757d; font-weight: bold; }
+
+/* File list styling */
+.file-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.file-item .file-info {
+    display: flex;
+    align-items: center;
+}
+
+.file-item .file-icon {
+    color: #0d6efd;
+    margin-right: 8px;
+}
+
+.file-item .remove-file {
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Results styling */
+.function-result {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.function-result .function-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.function-name {
+    font-family: 'Courier New', Monaco, monospace;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #495057;
+}
+
+.complexity-badge {
+    font-size: 1em;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.confidence-bar {
+    height: 6px;
+    background-color: #e9ecef;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.confidence-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #dc3545, #ffc107, #198754);
+    transition: width 0.3s ease;
+}
+
+.reasons-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.reasons-list li {
+    background-color: #f8f9fa;
+    padding: 6px 12px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    border-left: 4px solid #0d6efd;
+}
+
+/* Chart container */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin: 20px 0;
+}
+
+/* Loading spinner */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Summary stats */
+.stat-card {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #6c757d;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+    .function-result .function-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .complexity-badge {
+        margin-top: 8px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Code syntax highlighting (basic) */
+pre code {
+    background-color: #f8f9fa;
+    padding: 16px;
+    border-radius: 8px;
+    display: block;
+    overflow-x: auto;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+}
